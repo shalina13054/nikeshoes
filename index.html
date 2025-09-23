@@ -1,0 +1,152 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Nike Store</title>
+  <style>
+    body {
+      margin: 0;
+      font-family: "Poppins", sans-serif;
+      background: #f9f9f9;
+      color: #333;
+    }
+    header {
+      background: url('https://images.unsplash.com/photo-1606813909024-79b0e67a14f8?auto=format&fit=crop&w=1600&q=80') center/cover no-repeat;
+      height: 60vh;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      flex-direction: column;
+      color: white;
+      text-shadow: 0 3px 8px rgba(0,0,0,0.6);
+    }
+    header h1 {
+      font-size: 3rem;
+      margin: 0;
+    }
+    header p {
+      font-size: 1.2rem;
+    }
+    .products {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+      gap: 20px;
+      padding: 40px;
+      max-width: 1200px;
+      margin: auto;
+    }
+    .card {
+      background: white;
+      border-radius: 12px;
+      box-shadow: 0 4px 12px rgba(0,0,0,0.1);
+      overflow: hidden;
+      transition: transform 0.2s ease;
+    }
+    .card:hover {
+      transform: translateY(-5px);
+    }
+    .card img {
+      width: 100%;
+      height: 200px;
+      object-fit: cover;
+    }
+    .card-content {
+      padding: 15px;
+    }
+    .card h3 {
+      margin: 0;
+      font-size: 1.2rem;
+    }
+    .card p {
+      font-size: 0.9rem;
+      color: #555;
+    }
+    .price {
+      font-weight: bold;
+      margin: 10px 0;
+    }
+    button {
+      padding: 10px 16px;
+      border: none;
+      background: black;
+      color: white;
+      border-radius: 8px;
+      cursor: pointer;
+      transition: background 0.2s;
+    }
+    button:hover {
+      background: #e63946;
+    }
+  </style>
+</head>
+<body>
+  <header>
+    <h1>NIKE STORE</h1>
+    <p>Step Into Style with Our Latest Collection</p>
+  </header>
+
+  <section class="products">
+    <div class="card">
+      <img src="https://via.placeholder.com/400x250?text=Nike+Air+Max" alt="Nike Air Max">
+      <div class="card-content">
+        <h3>Nike Air Max</h3>
+        <p>Comfort and style for everyday wear.</p>
+        <div class="price">₹8,999</div>
+        <button onclick="buyNow('Nike Air Max','₹8,999')">Buy Now</button>
+      </div>
+    </div>
+    <div class="card">
+      <img src="https://via.placeholder.com/400x250?text=Nike+Revolution" alt="Nike Revolution">
+      <div class="card-content">
+        <h3>Nike Revolution</h3>
+        <p>Lightweight running shoes for speed.</p>
+        <div class="price">₹5,499</div>
+        <button onclick="buyNow('Nike Revolution','₹5,499')">Buy Now</button>
+      </div>
+    </div>
+    <div class="card">
+      <img src="https://via.placeholder.com/400x250?text=Nike+Blazer" alt="Nike Blazer">
+      <div class="card-content">
+        <h3>Nike Blazer</h3>
+        <p>Retro basketball shoes with a modern twist.</p>
+        <div class="price">₹7,299</div>
+        <button onclick="buyNow('Nike Blazer','₹7,299')">Buy Now</button>
+      </div>
+    </div>
+    <div class="card">
+      <img src="https://via.placeholder.com/400x250?text=Nike+Pegasus" alt="Nike Pegasus">
+      <div class="card-content">
+        <h3>Nike Pegasus</h3>
+        <p>Perfect blend of comfort and performance.</p>
+        <div class="price">₹9,199</div>
+        <button onclick="buyNow('Nike Pegasus','₹9,199')">Buy Now</button>
+      </div>
+    </div>
+    <div class="card">
+      <img src="https://via.placeholder.com/400x250?text=Nike+Jordan" alt="Nike Jordan">
+      <div class="card-content">
+        <h3>Nike Jordan</h3>
+        <p>Iconic sneakers for the bold and stylish.</p>
+        <div class="price">₹12,499</div>
+        <button onclick="buyNow('Nike Jordan','₹12,499')">Buy Now</button>
+      </div>
+    </div>
+    <div class="card">
+      <img src="https://via.placeholder.com/400x250?text=Nike+Metcon" alt="Nike Metcon">
+      <div class="card-content">
+        <h3>Nike Metcon</h3>
+        <p>Durable training shoes for workouts.</p>
+        <div class="price">₹6,799</div>
+        <button onclick="buyNow('Nike Metcon','₹6,799')">Buy Now</button>
+      </div>
+    </div>
+  </section>
+
+  <script>
+    function buyNow(name, price) {
+      localStorage.setItem("selectedProduct", JSON.stringify({name, price}));
+      window.location.href = "form.html";
+    }
+  </script>
+</body>
+</html>
