@@ -2,70 +2,33 @@
 <html lang="en">
 <head>
   <meta charset="UTF-8">
-  <title>Payment</title>
+  <title>Clothify - Payment</title>
   <style>
-    body {
-      font-family: "Poppins", sans-serif;
-      background: #f4f4f9;
-      display: flex;
-      justify-content: center;
-      align-items: center;
-      height: 100vh;
-    }
-    .payment-container {
-      background: white;
-      padding: 30px;
-      border-radius: 12px;
-      box-shadow: 0 4px 12px rgba(0,0,0,0.1);
-      max-width: 400px;
-      width: 100%;
-    }
-    h2 {
-      text-align: center;
-      margin-top: 0;
-    }
-    label {
-      display: block;
-      margin: 10px 0 5px;
-      font-weight: 500;
-    }
-    input {
-      width: 100%;
-      padding: 10px;
-      border-radius: 8px;
-      border: 1px solid #ccc;
-      margin-bottom: 15px;
-    }
-    button {
-      width: 100%;
-      padding: 12px;
-      background: black;
-      color: white;
-      border: none;
-      border-radius: 8px;
-      cursor: pointer;
-    }
-    button:hover {
-      background: #e63946;
-    }
+    body { font-family:'Segoe UI', sans-serif; background:#f8f8f8; padding:40px; }
+    .container { max-width:400px; margin:auto; background:white; padding:30px; border-radius:12px; box-shadow:0 4px 12px rgba(0,0,0,0.1); }
+    h2 { text-align:center; margin-bottom:20px; }
+    label { display:block; margin:10px 0 5px; }
+    input { width:100%; padding:10px; margin-bottom:15px; border:1px solid #ccc; border-radius:8px; }
+    button { width:100%; padding:12px; border:none; border-radius:8px; background:#333; color:white; font-size:1em; cursor:pointer; transition:.3s; }
+    button:hover { background:#e63946; }
   </style>
 </head>
 <body>
-  <div class="payment-container">
-    <h2>Payment</h2>
-    <form onsubmit="payNow(event)">
+  <div class="container">
+    <h2>Payment Details</h2>
+    <form onsubmit="pay(event)">
       <label>Card Number</label>
-      <input type="text" maxlength="16" required>
+      <input type="text" required>
       <label>Expiry Date</label>
       <input type="text" placeholder="MM/YY" required>
       <label>CVV</label>
-      <input type="password" maxlength="3" required>
+      <input type="password" required>
       <button type="submit">Proceed to Pay</button>
     </form>
   </div>
 
   <script>
-    function payNow(e) {
+    function pay(e){
       e.preventDefault();
       window.location.href = "thankyou.html";
     }
