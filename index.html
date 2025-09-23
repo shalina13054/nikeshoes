@@ -2,154 +2,96 @@
 <html lang="en">
 <head>
   <meta charset="UTF-8">
-  <title>Nike Store</title>
+  <title>Clothify - Trendy Clothing Store</title>
   <style>
-    body {
-      margin: 0;
-      font-family: "Poppins", sans-serif;
-      background: #f9f9f9;
-      color: #333;
-    }
-    header {
-      background: url('https://images.unsplash.com/photo-1606813909024-79b0e67a14f8?auto=format&fit=crop&w=1600&q=80') center/cover no-repeat;
-      height: 60vh;
-      display: flex;
-      align-items: center;
-      justify-content: center;
-      flex-direction: column;
-      color: white;
-      text-shadow: 0 3px 8px rgba(0,0,0,0.6);
-    }
-    header h1 {
-      font-size: 3rem;
-      margin: 0;
-    }
-    header p {
-      font-size: 1.2rem;
-    }
-    .products {
-      display: grid;
-      grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
-      gap: 20px;
-      padding: 40px;
-      max-width: 1200px;
-      margin: auto;
-    }
-    .card {
-      background: white;
-      border-radius: 12px;
-      box-shadow: 0 4px 12px rgba(0,0,0,0.1);
-      overflow: hidden;
-      transition: transform 0.2s ease;
-    }
-    .card:hover {
-      transform: translateY(-5px);
-    }
-    .card img {
-      width: 100%;
-      height: 220px;
-      object-fit: contain;
-      background: #f2f2f2;
-    }
-    .card-content {
-      padding: 15px;
-    }
-    .card h3 {
-      margin: 0;
-      font-size: 1.2rem;
-    }
-    .card p {
-      font-size: 0.9rem;
-      color: #555;
-    }
-    .price {
-      font-weight: bold;
-      margin: 10px 0;
-    }
-    button {
-      padding: 10px 16px;
-      border: none;
-      background: black;
-      color: white;
-      border-radius: 8px;
-      cursor: pointer;
-      transition: background 0.2s;
-    }
-    button:hover {
-      background: #e63946;
-    }
+    body { margin:0; font-family: 'Segoe UI', sans-serif; background:#f8f8f8; color:#333; }
+    header { background:url('https://via.placeholder.com/1600x500/000000/ffffff?text=Clothify+Store') center/cover no-repeat; height:60vh; display:flex; justify-content:center; align-items:center; color:white; text-align:center; }
+    header h1 { font-size:3em; margin:0; }
+    header p { font-size:1.3em; }
+    .products { padding:50px; display:grid; grid-template-columns:repeat(auto-fit, minmax(250px,1fr)); gap:20px; }
+    .card { background:white; border-radius:12px; box-shadow:0 4px 12px rgba(0,0,0,0.1); overflow:hidden; transition:.3s; }
+    .card:hover { transform:translateY(-5px); }
+    .card img { width:100%; height:300px; object-fit:cover; }
+    .card-content { padding:20px; }
+    .card h3 { margin:0 0 10px; font-size:1.2em; }
+    .card p { font-size:0.9em; color:#666; }
+    .price { font-weight:bold; margin:10px 0; color:#e63946; }
+    button { background:#333; color:white; border:none; padding:10px 15px; border-radius:8px; cursor:pointer; transition:.3s; }
+    button:hover { background:#e63946; }
   </style>
 </head>
 <body>
   <header>
-    <h1>NIKE STORE</h1>
-    <p>Step Into Style with Our Latest Collection</p>
+    <div>
+      <h1>Clothify</h1>
+      <p>Your Fashion, Your Style ✨</p>
+    </div>
   </header>
 
   <section class="products">
     <div class="card">
-      <img src="https://static.nike.com/a/images/t_default/0d4d8f63-2b8c-40d5-928d-2c1c91a9d3f2/air-max-270-mens-shoes-KkLcGR.png" alt="Nike Air Max">
+      <img src="https://via.placeholder.com/300x400?text=T-Shirt" alt="T-Shirt">
       <div class="card-content">
-        <h3>Nike Air Max</h3>
-        <p>Comfort and style for everyday wear.</p>
-        <div class="price">₹8,999</div>
-        <button onclick="buyNow('Nike Air Max','₹8,999')">Buy Now</button>
+        <h3>Classic T-Shirt</h3>
+        <p>Soft cotton t-shirt perfect for everyday wear.</p>
+        <div class="price">$25</div>
+        <button onclick="buyNow('Classic T-Shirt','$25')">Buy Now</button>
       </div>
     </div>
 
     <div class="card">
-      <img src="https://static.nike.com/a/images/t_default/0c1e9f42-f779-4767-864f-6ec6e3c0f06a/revolution-6-mens-road-running-shoes-nCz1N8.png" alt="Nike Revolution">
+      <img src="https://via.placeholder.com/300x400?text=Jeans" alt="Jeans">
       <div class="card-content">
-        <h3>Nike Revolution</h3>
-        <p>Lightweight running shoes for speed.</p>
-        <div class="price">₹5,499</div>
-        <button onclick="buyNow('Nike Revolution','₹5,499')">Buy Now</button>
+        <h3>Blue Jeans</h3>
+        <p>Comfort-fit jeans for all-day style.</p>
+        <div class="price">$45</div>
+        <button onclick="buyNow('Blue Jeans','$45')">Buy Now</button>
       </div>
     </div>
 
     <div class="card">
-      <img src="https://static.nike.com/a/images/t_default/cc1c5a6c-f4b5-4703-84c2-511f2ddc12c5/blazer-mid-77-vintage-mens-shoes-nm3W3j.png" alt="Nike Blazer">
+      <img src="https://via.placeholder.com/300x400?text=Dress" alt="Dress">
       <div class="card-content">
-        <h3>Nike Blazer</h3>
-        <p>Retro basketball shoes with a modern twist.</p>
-        <div class="price">₹7,299</div>
-        <button onclick="buyNow('Nike Blazer','₹7,299')">Buy Now</button>
+        <h3>Summer Dress</h3>
+        <p>Lightweight floral dress for sunny days.</p>
+        <div class="price">$40</div>
+        <button onclick="buyNow('Summer Dress','$40')">Buy Now</button>
       </div>
     </div>
 
     <div class="card">
-      <img src="https://static.nike.com/a/images/t_default/926d25a6-4cf0-41ee-8a20-d019bf79381c/air-zoom-pegasus-39-mens-road-running-shoes-gZW8x2.png" alt="Nike Pegasus">
+      <img src="https://via.placeholder.com/300x400?text=Jacket" alt="Jacket">
       <div class="card-content">
-        <h3>Nike Pegasus</h3>
-        <p>Perfect blend of comfort and performance.</p>
-        <div class="price">₹9,199</div>
-        <button onclick="buyNow('Nike Pegasus','₹9,199')">Buy Now</button>
+        <h3>Leather Jacket</h3>
+        <p>Stylish and warm, a timeless wardrobe piece.</p>
+        <div class="price">$120</div>
+        <button onclick="buyNow('Leather Jacket','$120')">Buy Now</button>
       </div>
     </div>
 
     <div class="card">
-      <img src="https://static.nike.com/a/images/t_default/1e7e2f39-8dc3-494c-bf95-78618c9f4e3a/air-jordan-1-mid-mens-shoes-X5pMZW.png" alt="Nike Jordan">
+      <img src="https://via.placeholder.com/300x400?text=Hoodie" alt="Hoodie">
       <div class="card-content">
-        <h3>Nike Jordan</h3>
-        <p>Iconic sneakers for the bold and stylish.</p>
-        <div class="price">₹12,499</div>
-        <button onclick="buyNow('Nike Jordan','₹12,499')">Buy Now</button>
+        <h3>Casual Hoodie</h3>
+        <p>Cozy hoodie with modern fit for any season.</p>
+        <div class="price">$35</div>
+        <button onclick="buyNow('Casual Hoodie','$35')">Buy Now</button>
       </div>
     </div>
 
     <div class="card">
-      <img src="https://static.nike.com/a/images/t_default/89b7c6c8-2d57-49d4-9d11-073cf0b9a7ab/metcon-9-mens-workout-shoes-FhTtL9.png" alt="Nike Metcon">
+      <img src="https://via.placeholder.com/300x400?text=Shirt" alt="Shirt">
       <div class="card-content">
-        <h3>Nike Metcon</h3>
-        <p>Durable training shoes for workouts.</p>
-        <div class="price">₹6,799</div>
-        <button onclick="buyNow('Nike Metcon','₹6,799')">Buy Now</button>
+        <h3>Formal Shirt</h3>
+        <p>Elegant shirt perfect for office and meetings.</p>
+        <div class="price">$30</div>
+        <button onclick="buyNow('Formal Shirt','$30')">Buy Now</button>
       </div>
     </div>
   </section>
 
   <script>
-    function buyNow(name, price) {
+    function buyNow(name, price){
       localStorage.setItem("selectedProduct", JSON.stringify({name, price}));
       window.location.href = "form.html";
     }
